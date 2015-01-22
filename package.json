@@ -1,6 +1,6 @@
 {
   "name": "node-icns",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Tool to create icns files for OSX",
   "main": "index.js",
   "bin": {
@@ -12,7 +12,6 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "inquirer": "^0.8.0",
     "nomnom": "^1.8.1",
     "q": "^1.1.2"
   }

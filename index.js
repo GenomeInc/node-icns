@@ -4,7 +4,6 @@ var os           = require('os'),
 fs               = require('fs'),
 path             = require('path'),
 exec             = require('child_process').exec,
-inquirer         = require('inquirer'),
 q                = require('q'),
 pkg              = require(path.join(__dirname, 'package.json'));
 
@@ -17,8 +16,8 @@ var program = require('nomnom').script('icns')
       return "node-icns version " + pkg.version;
     }
   })
-  .option('in', {help: 'Set the input folder name, by default it assumes the current working directory'})
-  .option('out', {help: 'Set the output .icns file name, by default it will be the name of the current dir.icns'})
+  .option('in', {abbr: 'i', help: 'Set the input folder name, by default it assumes the current working directory'})
+  .option('out', {abbr: 'o', help: 'Set the output .icns file name, by default it will be the name of the current dir.icns'})
   .parse();
 
 var cwd =  process.cwd();
@@ -98,7 +97,7 @@ function buildIconSet() {
 }
 
 function cleanUp() {
-  console.log('Running:      iconutil -c icns ' + tmp);
+  console.log('Running:      iconutil -c icns ' + tmp + ' -o ' + outName);
   exec('iconutil -c icns ' + tmp + ' -o ' + outName, function(err, stdout, stderr) {
     if(err) {
       return console.log(err);
