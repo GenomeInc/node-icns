@@ -1,6 +1,6 @@
 {
   "name": "node-icns",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Tool to create icns files for OSX",
   "main": "index.js",
   "repository": "https://github.com/typefoo/node-icns",
@@ -11,7 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "MIT",
+  "license": "AGPL-3.0",
   "dependencies": {
     "nomnom": "^1.8.1",
     "q": "^1.1.2"
