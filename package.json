@@ -3,6 +3,7 @@
   "version": "0.0.2",
   "description": "Tool to create icns files for OSX",
   "main": "index.js",
+  "repository": "https://github.com/typefoo/node-icns",
   "bin": {
     "nicns": "./index.js"
   },
